@@ -33,7 +33,7 @@ Follow the steps below to get the React app running locally:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/your-frontend-repo.git
+git clone https://github.com/Nishith08/ward_wizard_taskmanagement-frontend
 cd your-frontend-repo
 2. Install the dependencies
 npm install

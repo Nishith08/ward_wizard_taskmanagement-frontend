@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar {
+  background-color: #0d2c57;
   color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar h1 {
+  margin: 0;
+  font-size: 1.25rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0 1rem 0;
+}
+
+.dashboard-header h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.dashboard-header button {
+  background-color: #2f55d4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.filters span {
+  cursor: pointer;
+  color: #0d2c57;
+  position: relative;
+}
+
+.filters span.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #0d2c57;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.task-table thead {
+  background-color: #e9ecef;
+}
+
+.task-table th,
+.task-table td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.task-table td.actions {
+  color: #2f55d4;
+}
+
+.task-table td.actions span {
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  max-width: 600px;
+  margin: auto;
+}
+
+button.submit {
+  background-color: #2f55d4;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
 }
